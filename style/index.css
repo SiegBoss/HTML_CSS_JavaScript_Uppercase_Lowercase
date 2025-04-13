@@ -24,30 +24,29 @@ body {
 
 /* --- MODO CLARO (Predeterminado) | LIGHT MODE (Default) --- */
 :root {
-  --background: #f5f7fa;
-  --text: #1e1e1e;
-  --button-bg: #3a3aff;
+  --background: #e8f0fe;
+  --text: #1c1c1c;
+  --button-bg: #5c7cfa;
   --button-text: #fff;
-  --button-hover: #2424d4;
+  --button-hover: #4c6ef5;
   --textarea-bg: #ffffff;
-  --textarea-border: #cccccc;
+  --textarea-border: #b0c4de;
   --card-bg: #ffffff;
   --shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 /* --- Modo Oscuro | Dark Mode --- */
 :root.dark-theme {
-  --background: #121212;
-  --text: #f2f2f2;
-  --button-bg: #4444ff;
+  --background: #1f1f2e;
+  --text: #eaeaea;
+  --button-bg: #3b3f5c;
   --button-text: #ffffff;
-  --button-hover: #3333cc;
-  --textarea-bg: #1e1e1e;
-  --textarea-border: #444;
-  --card-bg: #1a1a1a;
+  --button-hover: #2f324a;
+  --textarea-bg: #2a2a3d;
+  --textarea-border: #555;
+  --card-bg: #24243a;
   --shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
-
 
 /* Header Con BotóN De Cambio De Tema | Header With Theme Toggle Button */
 header {

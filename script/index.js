@@ -75,3 +75,10 @@ function showToast(message, isError = false) {
     toast.remove();
   }, 3000);
 }
+
+// Borra el contenido del área de texto | Clears the text area
+function clearText() {
+  const input = document.getElementById('textInput');
+  input.value = '';
+  showToast('Texto borrado');
+}
