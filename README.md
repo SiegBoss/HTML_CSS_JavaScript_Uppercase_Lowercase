@@ -26,6 +26,7 @@ Puedes ver una demostración del proyecto en funcionamiento aquí:  https://sieg
 
 Este proyecto está bajo la licencia MIT. Consulta el archivo [`LICENSE`] para más información.
 
+---
 
 # ✍️ Text Transformer in HTML, CSS and JavaScript
 
