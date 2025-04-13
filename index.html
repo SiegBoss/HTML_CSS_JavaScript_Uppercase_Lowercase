@@ -1,34 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <!-- Autor: SiegBoss | Author: SiegBoss -->
-<!-- Descripción: Cifrado y Decifrado | Description: Cipher and Decipher -->
+<!-- Descripción: Transformador de Texto | Description: Text Transformer -->
 <head>
   <meta charset="utf-8" />
   <meta name="author" content="SiegBoss" />
-  <meta name="description" content="Cifrado y Decifrado" />
+  <meta name="description" content="Transformador de Texto" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cifrado y Decifrado Cesar</title>
+  <title>Transformador de Texto</title>
   <link rel="icon" type="image/x-icon" href="./images/logo_willy.png" />
+  <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="./style/index.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <h1>Transformador de Texto</h1>
+  <!-- Boton para cambiar entre modo claro y oscuro | Button to switch between light and dark mode -->
+  <header>
+    <button class="theme-toggle" onclick="toggleTheme()">🌑 Modo Oscuro</button>
+  </header>
 
-  <textarea id="textInput" placeholder="Escribe aquí tu texto..."></textarea>
-  
-  <div class="buttons">
-    <button onclick="toUpperCase()">TODO MAYÚSCULAS</button>
-    <button onclick="toLowerCase()">todo minúsculas</button>
-    <button onclick="capitalizeWords()">Capitalizar Cada Palabra</button>
-    <button onclick="copyText()">Copiar</button>
-    <button onclick="pasteText()">Pegar</button>
-    <button onclick="toggleTheme()">Cambiar Tema</button>
-  </div>
+  <!-- Contenedor para el mensaje de notificación | Container for the notification message -->
+  <div id="toast-container"> </div>
 
+  <!-- Contenedor principal de la página | Main container of the page -->
+  <main class="container">
+    <!-- Sección del transformador de texto | Text transformer section -->
+    <section class="text-transformer">
+      <h1>Transformador de Texto</h1>
+      <textarea id="textInput" placeholder="Escribe aquí tu texto..."></textarea>
+      <!-- Botones para transformar el texto | Buttons to transform the text -->
+      <div class="buttons">
+        <button onclick="toUpperCase()">TODO MAYÚSCULAS</button>
+        <button onclick="toLowerCase()">todo minúsculas</button>
+        <button onclick="capitalizeWords()">Capitalizar Cada Palabra</button>
+        <button onclick="copyText()">Copiar</button>
+        <button onclick="pasteText()">Pegar</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Script para la funcionalidad del transformador de texto | Script for the text transformer functionality -->
   <script src="./script/index.js"></script>
 </body>
+
 </html>
