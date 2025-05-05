@@ -1,9 +1,12 @@
+const toast = document.createElement('div');
+const button = document.querySelector('.theme-toggle');
+const input = document.getElementById('textInput');
+const container = document.getElementById('toast-container');
+const html = document.documentElement;
+
 //FUNCIÓN: Alternar Tema Claro/Oscuro | Fucntion: Toggle Light/Dark Theme
 
 function toggleTheme() {
-  const html = document.documentElement;
-  const button = document.querySelector('.theme-toggle');
-
   // Cambia la clase del tema en el elemento raíz | Change the theme class on the root element
   html.classList.toggle('dark-theme');
 
@@ -16,19 +19,17 @@ function toggleTheme() {
 
 // Convierte el texto a mayúsculas | Converts text to uppercase
 function toUpperCase() {
-  const input = document.getElementById('textInput');
+  
   input.value = input.value.toUpperCase();
 }
 
 // Convierte el texto a minúsculas | Converts text to lowercase
 function toLowerCase() {
-  const input = document.getElementById('textInput');
   input.value = input.value.toLowerCase();
 }
 
 // Capitaliza la primera letra de cada palabra | Capitalizes the first letter of each word  
 function capitalizeWords() {
-  const input = document.getElementById('textInput');
   input.value = input.value
     .toLowerCase()
     .replace(/\b\w/g, char => char.toUpperCase());
@@ -48,7 +49,6 @@ async function pasteText() {
 
 // Copia el contenido del área de texto al portapapeles | Copies the content of the text area to the clipboard
 function copyText() {
-  const input = document.getElementById('textInput');
   input.select();
 
   navigator.clipboard.writeText(input.value)
@@ -63,11 +63,11 @@ function copyText() {
 // FUNCIÓN: Mostrar Notificación (Toast) | FUNCTION: Show Notification (Toast)
 
 function showToast(message, isError = false) {
-  const toast = document.createElement('div');
+
   toast.className = 'toast' + (isError ? ' error' : '');
   toast.textContent = message;
 
-  const container = document.getElementById('toast-container');
+  
   container.appendChild(toast);
 
   // Elimina el toast después de 3 segundos | Remove the toast after 3 seconds
@@ -78,7 +78,7 @@ function showToast(message, isError = false) {
 
 // Borra el contenido del área de texto | Clears the text area
 function clearText() {
-  const input = document.getElementById('textInput');
+
   input.value = '';
   showToast('Texto borrado');
 }
